@@ -1,13 +1,20 @@
-/* global require, module */
+import path            from 'path';
+import coreConfig      from './webpack.core.config';
+import merge           from 'webpack-merge';
 
-const webpackConfig = require('./webpack.core.config');
-const path          = require('path');
+import StyleLintPlugin from 'stylelint-webpack-plugin';
 
-webpackConfig.entry = './index.js';
-webpackConfig.output = {
-	path: path.resolve('build') + '/',
-	publicPath: 'build',
-	filename: 'build.js'
+const webpackDevConfig = {
+	entry: './index.js',
+	output: {
+		path: path.resolve('build') + '/',
+		publicPath: 'build',
+		filename: 'build.js'
+	},
+	plugins: [
+		new StyleLintPlugin()
+	]
 };
 
-module.exports = webpackConfig;
+
+export default merge(coreConfig, webpackDevConfig);

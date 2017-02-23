@@ -1,21 +1,22 @@
-/*global module, require */
+import webpack    from 'webpack';
+import coreConfig from './webpack.core.config';
+import merge      from 'webpack-merge';
 
-var webpack = require('webpack');
-var config = require('./webpack.core.config');
-
-config.entry = './src/index.js';
-config.output = {
-	filename: './dist/hello-world.min.js',
-	library: 'HelloWorld',
-	libraryTarget: 'umd'
+const webpackProdConfig = {
+	entry: './src/js/index.js',
+	output: {
+		filename: './dist/hello-world.min.js',
+		library: 'HelloWorld',
+		libraryTarget: 'umd'
+	},
+	plugins: [
+		new webpack.optimize.UglifyJsPlugin({
+			sourceMap: false,
+			compress: {
+				warnings: false
+			}
+		})
+	]
 };
 
-config.plugins = (config.plugins || []).concat([
-	new webpack.optimize.UglifyJsPlugin({
-		sourceMap: false,
-		compress: {
-			warnings: false
-		}
-	})
-]);
-module.exports = config;
+export default merge(coreConfig, webpackProdConfig);

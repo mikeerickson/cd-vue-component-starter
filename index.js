@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import HelloWorld from './src/HelloWorld.vue';
+import HelloWorld from './src/js/HelloWorld.vue';
 
 new Vue({
 	el: '#container',

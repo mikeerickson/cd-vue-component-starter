@@ -1,11 +1,24 @@
 {
   "name": "cd-vue-component-starter",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "CodeDungeon Vue Component Starter",
+  "main": "./dist/hello-world.min.js",
+  "homepage": "https://github.com/mikeerickson/cd-vue-component-starter",
+  "bugs": {
+    "url": "https://github.com/mikeerickson/cd-vue-component-starter/issues",
+    "email": "codedungeon@gmail.com"
+  },
+  "keywords": [
+    "vue-component",
+    "vuejs"
+  ],
+  "author": "Mike Erickson <codedungeon@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "build:dev": "./node_modules/.bin/webpack-dev-server --inline --watch --progress --config webpack.dev.config.js --port 5000",
-    "build:prod": "./node_modules/.bin/webpack --progress --hide-modules --config webpack.prod.config.js"
+    "lint:scripts": "eslint \"./src/js/**/*\" || true",
+    "lint:sass": "sass-lint \"./src/sass/*.s+(a|c)ss\" -q -v || true",
+    "build:dev": "node -r babel-register node_modules/.bin/webpack-dev-server --inline --watch --progress --config webpack.dev.config.js --port 5000",
+    "build:prod": "node -r babel-register node_modules/.bin/webpack --progress --hide-modules --config webpack.prod.config.js"
   },
   "keywords": [],
   "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
@@ -27,8 +40,13 @@
     "isparta": "4.0.0",
     "isparta-loader": "2.0.0",
     "node-sass": "4.5.0",
+    "sass-lint": "1.10.2",
     "sass-loader": "6.0.2",
+    "sasslint-loader": "0.0.1",
     "style-loader": "0.13.1",
+    "stylelint-config-standard": "16.0.0",
+    "stylelint-processor-html": "1.0.0",
+    "stylelint-webpack-plugin": "0.6.0",
     "url-loader": "0.5.7",
     "vue-html-loader": "1.2.3",
     "vue-loader": "11.1.0",
