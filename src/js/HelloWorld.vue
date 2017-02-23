@@ -31,6 +31,6 @@
     .hello-world {
         padding: 10px;
         font-family: $font-family;
-        background: lighten(yellow, 30%);
+        /*background: lighten(yellow, 30%);*/
     }
 </style>
