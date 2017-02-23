@@ -1,7 +1,7 @@
 <template>
     <div class="hello-world">
         <h1>Hello World From Component</h1>
-        {{ currentTime() }}
+        <span id="time"></span>
     </div>
 </template>
 
@@ -11,26 +11,47 @@
     props: [],
     data: function () {
       return {
-
       };
     },
     methods: {
-      currentTime: function () {
-        const options = {
-          weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
-        };
-        return new Date().toLocaleDateString('en-us', options);
-      }
+
+    },
+    mounted: function() {
+      startTime();
     }
   };
+
+  function currentTime() {
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    };
+    return new Date().toLocaleDateString('en-us', options);
+  }
+
+  function startTime() {
+    document.getElementById('time').innerHTML = currentTime();
+    setTimeout(startTime, 1000);
+  }
+
 </script>
 
 <style scoped lang="sass">
     // just some basic sass work here to make sure all is configured
     $font-family: 'Source Code Pro';
+    $font-size:   36px;
     .hello-world {
-        padding: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
         font-family: $font-family;
-        /*background: lighten(yellow, 30%);*/
+        font-size: $font-size;
+        border: 1px solid lighten(yellow, 10%);
+        border-radius: 6px;
+        text-align: center;
     }
 </style>
