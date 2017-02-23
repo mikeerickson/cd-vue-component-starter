@@ -1,7 +1,7 @@
 <template>
     <div class="hello-world">
         <h1>Hello World From Component</h1>
-        <span id="time"></span>
+        <span class="timer"></span>
     </div>
 </template>
 
@@ -35,7 +35,7 @@
   }
 
   function startTime() {
-    document.getElementById('time').innerHTML = currentTime();
+    document.querySelector('.timer').innerHTML = currentTime();
     setTimeout(startTime, 1000);
   }
 
