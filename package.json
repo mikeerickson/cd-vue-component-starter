@@ -1,6 +1,6 @@
 {
   "name": "cd-vue-component-starter",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "CodeDungeon Vue Component Starter",
   "main": "./dist/hello-world.min.js",
   "homepage": "https://github.com/mikeerickson/cd-vue-component-starter",
@@ -8,11 +8,8 @@
     "url": "https://github.com/mikeerickson/cd-vue-component-starter/issues",
     "email": "codedungeon@gmail.com"
   },
-  "keywords": [
-    "vue-component",
-    "vuejs"
-  ],
-  "author": "Mike Erickson <codedungeon@gmail.com>",
+  "keywords": [],
+  "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
   "license": "MIT",
   "scripts": {
     "lint:scripts": "eslint \"./src/js/**/*\" || true",
@@ -20,9 +17,6 @@
     "build:dev": "node -r babel-register node_modules/.bin/webpack-dev-server --inline --watch --progress --config webpack.dev.config.js --port 5000",
     "build:prod": "node -r babel-register node_modules/.bin/webpack --progress --hide-modules --config webpack.prod.config.js"
   },
-  "keywords": [],
-  "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
-  "license": "MIT",
   "devDependencies": {
     "babel-core": "6.23.1",
     "babel-eslint": "7.1.1",
