@@ -7,38 +7,38 @@
 
 <script>
   export default {
-  	name: 'HelloWorld',
+    name: 'HelloWorld',
     props: [],
     data: function () {
       return {
-      	timestamp: _currentTime()
+        timestamp: _currentTime()
       };
     },
     methods: {
-    	currentTime: () => {
-    		return _currentTime();
-        },
-        timer: function() {
-        	setTimeout(() => {
-            this.timestamp = this.currentTime();
-            this.timer();
-          }, 1000);
-        }
+      currentTime: () => {
+        return _currentTime();
+      },
+      timer: function () {
+        setTimeout(() => {
+          this.timestamp = this.currentTime();
+          this.timer();
+        }, 1000);
+      }
     },
-    mounted: function() {
+    mounted: function () {
       this.timer();
     }
   };
 
-  function _currentTime() {
+  function _currentTime () {
     const options = {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
+      weekday: 'long',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
     };
     return new Date().toLocaleDateString('en-us', options);
   }
