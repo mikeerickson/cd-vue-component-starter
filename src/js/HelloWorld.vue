@@ -1,13 +1,13 @@
 <template>
     <div class="hello-world">
-        <h1>Hello World From Component</h1>
+        <h1>Current Time (Local Time)</h1>
         <div>{{ timestamp }}</div>
     </div>
 </template>
 
 <script>
   export default {
-    name: 'HelloWorld',
+  	name: 'HelloWorld',
     props: [],
     data: function () {
       return {
@@ -54,7 +54,7 @@
         padding-bottom: 10px;
         font-family: $font-family;
         font-size: $font-size;
-        border: 1px solid lighten(yellow, 10%);
+        border: 1px solid lightyellow;
         border-radius: 6px;
         text-align: center;
     }

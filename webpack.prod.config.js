@@ -7,7 +7,8 @@ const webpackProdConfig = {
 	output: {
 		filename: './dist/hello-world.min.js',
 		library: 'HelloWorld',
-		libraryTarget: 'umd'
+		libraryTarget: 'umd',
+    umdNamedDefine: true
 	},
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
