@@ -13,6 +13,7 @@
   "license": "MIT",
   "scripts": {
     "lint:scripts": "eslint \"./src/js/**/*\" || true",
+    "lint:scripts:watch": "esw \"./src/js/**/*\" --watch",
     "lint:sass": "sass-lint \"./src/sass/*.s+(a|c)ss\" -q -v || true",
     "build:dev": "node -r babel-register node_modules/.bin/webpack-dev-server --inline --watch --progress --config webpack.dev.config.js --port 5000",
     "build:prod:old": "node -r babel-register node_modules/.bin/webpack --progress --hide-modules --config webpack.prod.config.js",
@@ -31,6 +32,7 @@
     "eslint-config-vue": "2.0.2",
     "eslint-plugin-html": "2.0.1",
     "eslint-plugin-vue": "2.0.1",
+    "eslint-watch": "3.0.0",
     "file-loader": "0.10.0",
     "isparta": "4.0.0",
     "isparta-loader": "2.0.0",
