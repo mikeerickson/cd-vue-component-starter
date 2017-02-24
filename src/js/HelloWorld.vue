@@ -54,7 +54,7 @@
         padding-bottom: 10px;
         font-family: $font-family;
         font-size: $font-size;
-        border: 1px solid lightyellow;
+        border: 2px solid lighten(yellow, 30%);
         border-radius: 6px;
         text-align: center;
     }
