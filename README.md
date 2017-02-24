@@ -11,6 +11,10 @@ Starter Project for creating Vue Components
 
 > npm install
 
+> npm run build:dev (starts up a webpack-dev-server instance)
+
+> hit `http://localhost:5000` in your browser
+
 ```
 
 ### License
