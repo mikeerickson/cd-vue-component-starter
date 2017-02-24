@@ -6,6 +6,7 @@ import StyleLintPlugin from 'stylelint-webpack-plugin';
 
 const webpackDevConfig = {
 	entry: './index.js',
+	devtool: 'inline-source-map',
 	output: {
 		path: path.resolve('build') + '/',
 		publicPath: 'build',

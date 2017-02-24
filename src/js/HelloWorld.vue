@@ -1,7 +1,7 @@
 <template>
     <div class="hello-world">
         <h1>Hello World From Component</h1>
-        <span class="timer"></span>
+        <div>{{ timestamp }}</div>
     </div>
 </template>
 
@@ -11,17 +11,26 @@
     props: [],
     data: function () {
       return {
+      	timestamp: _currentTime()
       };
     },
     methods: {
-
+    	currentTime: () => {
+    		return _currentTime();
+        },
+        timer: function() {
+        	setTimeout(() => {
+            this.timestamp = this.currentTime();
+            this.timer();
+          }, 1000);
+        }
     },
     mounted: function() {
-      startTime();
+      this.timer();
     }
   };
 
-  function currentTime() {
+  function _currentTime() {
     const options = {
         weekday: 'long',
         year: 'numeric',
@@ -32,11 +41,6 @@
         second: '2-digit'
     };
     return new Date().toLocaleDateString('en-us', options);
-  }
-
-  function startTime() {
-    document.querySelector('.timer').innerHTML = currentTime();
-    setTimeout(startTime, 1000);
   }
 
 </script>
