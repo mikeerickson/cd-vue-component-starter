@@ -2,8 +2,6 @@ import path            from 'path';
 import coreConfig      from './webpack.core.config';
 import merge           from 'webpack-merge';
 
-import StyleLintPlugin from 'stylelint-webpack-plugin';
-
 const webpackDevConfig = {
 	entry: './index.js',
 	devtool: 'inline-source-map',
@@ -11,10 +9,7 @@ const webpackDevConfig = {
 		path: path.resolve('build') + '/',
 		publicPath: 'build',
 		filename: 'build.js'
-	},
-	plugins: [
-		new StyleLintPlugin()
-	]
+	}
 };
 
 
