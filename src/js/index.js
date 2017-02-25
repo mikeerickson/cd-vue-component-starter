@@ -1,6 +1,5 @@
 /* global module */
 
-import Vue from 'vue';
 import HelloWorld from './HelloWorld.vue';
 // import '!style-loader!css-loader!sass-loader!../sass/app.scss';
 

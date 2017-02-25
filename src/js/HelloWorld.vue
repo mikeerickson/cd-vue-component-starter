@@ -45,7 +45,7 @@
 
 </script>
 
-<style scoped lang="sass">
+<style scoped>
   // just some basic sass work here to make sure all is configured
   $font-family: 'Source Code Pro';
   $font-size:   36px;
