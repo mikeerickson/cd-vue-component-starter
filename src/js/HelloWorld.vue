@@ -46,16 +46,17 @@
 </script>
 
 <style scoped lang="sass">
-    // just some basic sass work here to make sure all is configured
-    $font-family: 'Source Code Pro';
-    $font-size:   36px;
-    .hello-world {
-        padding-left: 10px;
-        padding-bottom: 10px;
-        font-family: $font-family;
-        font-size: $font-size;
-        border: 2px solid lighten(yellow, 30%);
-        border-radius: 6px;
-        text-align: center;
-    }
+  // just some basic sass work here to make sure all is configured
+  $font-family: 'Source Code Pro';
+  $font-size:   36px;
+  .hello-world {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-family: $font-family;
+    font-size: $font-size;
+    border: 2px solid lighten(yellow, 30%);
+    border-radius: 6px;
+    text-align: center;
+  }
 </style>
