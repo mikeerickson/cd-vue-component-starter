@@ -1,7 +1,7 @@
 <template>
     <div class="hello-world">
-        <h1>Current Time (Local Time)</h1>
-        <div>{{ timestamp }}</div>
+      <h1>Current Time (Local Time)</h1>
+      <div>{{ timestamp }}</div>
     </div>
 </template>
 
@@ -45,10 +45,10 @@
 
 </script>
 
-<style scoped>
+<style scoped lang="sass">
   // just some basic sass work here to make sure all is configured
   $font-family: 'Source Code Pro';
-  $font-size:   36px;
+  $font-size:   18px;
   .hello-world {
     padding-left: 10px;
     padding-bottom: 10px;

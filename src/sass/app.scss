@@ -1,7 +1,11 @@
+//- Application `scss`
+//- Vue Component `scss` defined in associated components
+
 $font-family: 'Source Code Pro';
-$body-bg:     #f5f8fa;
+$body-bg:     lightgreen;
 
 body {
+  margin: 40px;
   font-family: $font-family;
   background-color: $body-bg;
   font-size: 14px;

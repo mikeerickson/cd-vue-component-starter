@@ -7,6 +7,7 @@ module.exports = {
 			{test: /\.vue$/, loader: 'vue-loader'},
 			{test: /\s[a|c]ss$/, loaders: ['style-loader','css-loader', 'sass-loader'], exclude: /(node_modules)/},
 			{test: /\s[a|c]ss$/, loader: 'sasslint', exclude: /(node_modules)/},
+      { test: /\.png$/,  use: { loader: 'url-loader', options: { limit: 100000 } }, }
 		]
 	},
 	resolve: {

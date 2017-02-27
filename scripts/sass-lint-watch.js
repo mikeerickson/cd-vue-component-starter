@@ -12,15 +12,16 @@ let sassLintBin = './node_modules/.bin/sass-lint';
 
 msg.log(chalk.bold.cyan('\n==> Watching ' + srcFiles));
 
-chokidar.watch(srcFiles, {ignored: /[\/\\]\./}).on('all', (event, path) => {
-  execa(sassLintBin, [path, '-v -p'], {stdio: 'inherit'})
-    .then(result => {
-      console.log('');
-      msg.success('Sass Linting Complete... \n');
-    })
-    .catch(result => {
-      if(result.stderr) {
-        msg.error(result.stderr);
-      }
-    });
+chokidar.watch(srcFiles, {ignored: /[\/\\]\./})
+  .on('all', (event, path) => {
+    execa(sassLintBin, [path, '-v -p'], {stdio: 'inherit'})
+      .then(result => {
+        console.log('');
+        msg.success('Sass Linting Complete... \n');
+      })
+      .catch(result => {
+        if(result.stderr) {
+          msg.error(result.stderr);
+        }
+      });
 });
